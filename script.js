@@ -1,19 +1,20 @@
-const quotes = [
-  "Believe you can and you're halfway there.",
-  "You miss 100% of the shots you don’t take.",
-  "Success is not final, failure is not fatal: It is the courage to continue that counts.",
-  "It does not matter how slowly you go as long as you do not stop."
-];
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quote Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Random Quote Generator</h1>
+    <p id="quote">Click the button to see a quote!</p>
+    <button id="new-quote">New Quote</button>
+  </div>
 
-document.addEventListener("DOMContentLoaded", () => {
-  const quoteText = document.getElementById("quote");
-  const newQuoteBtn = document.getElementById("new-quote");
+  <!-- Link JavaScript here -->
+  <script src="script.js"></script>
+</body>
+</html>
 
-  function getQuote() {
-    const randomIndex = Math.floor(Math.random() * quotes.length);
-    quoteText.textContent = quotes[randomIndex];
-  }
-
-  newQuoteBtn.addEventListener("click", getQuote);
-  getQuote();
-});
