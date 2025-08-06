@@ -1,20 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Quote Generator</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div class="container">
-    <h1>Random Quote Generator</h1>
-    <p id="quote">Click the button to see a quote!</p>
-    <button id="new-quote">New Quote</button>
-  </div>
+window.onload = function () {
+  const quotes = [
+    "Believe in yourself.",
+    "You are capable of amazing things.",
+    "Every day is a second chance.",
+    "Keep going, you're doing great!"
+  ];
 
-  <!-- Link JavaScript here -->
-  <script src="script.js"></script>
-</body>
-</html>
+  const quoteButton = document.getElementById("new-quote");
+  const quoteDisplay = document.getElementById("quote");
+
+  quoteButton.addEventListener("click", () => {
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    quoteDisplay.textContent = quotes[randomIndex];
+  });
+};
+
 
